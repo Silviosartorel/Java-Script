@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 01</title>
+
+    <script>
+        //exibe uma janela
+        alert("olá galera!");
+    </script>
+
+    <script>
+        function trocartexto(umTexto){
+            var elemento = document.getElementById("frase")
+            var elementoNovo = document.getElementById("novaFrase").value
+            elemento.innerHTML = elementoNovo
+            }
+        
+    </script>
+
+    <script src="js/myscript.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <h1 ondblclick="trocarFrase()" id="frase">Olá mundo!</h1>
+    <input id="novaFrase" type="text"><br>
+    <input id="botao" type="button"
+    value="Trocar frase"
+    onclick="trocartexto('Olá')"><br>    
+<br>
+</body>
+</html>
