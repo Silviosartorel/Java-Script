@@ -1,10 +1,15 @@
-function trocarFrase() {
-    var fraseAtual = document.getElementById("frase");
-    fraseAtual.innerHTML = "Funcionou, a frase mudou";
-    fraseAtual.style.color = "red";
-    fraseAtual.style.fontSize = "25px";
-    fraseAtual.style.backgroundColor = "yellow";
+//aqui vai javascript
+function mudarFrase() {
+    var elemento = document.getElementById("frase")
+    elemento.innerHTML = "Qualquer frase"
+    elemento.style.color = "red";
+    elemento.style.fontSize = "25px";
+    elemento.style.backgroundColor = "yellow";
     //altera o fundo da página
     document.body.style.backgroundColor = "blue";
-    fraseAtual.innerHTML = "<img src=\'img/a.jpeg\' />"
+    elemento.innerHTML = "<img src=\'img/a.jpeg\' />"
+}
+
+function gebi(id){
+    return document.getElementById(id)
 }
