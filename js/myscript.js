@@ -9,6 +9,19 @@ function mudarFrase() {
     document.body.style.backgroundColor = "blue";
     elemento.innerHTML = "<img src=\'img/a.jpeg\' />"
 }
+function trocarClasse(){
+    console.log("chamou trocar frase")
+    var fraseAtual = gebi("frase");
+                fraseAtual.className = "h1_2";
+}
+
+    function trocarTexto(){
+        var elemento = gebi("frase")
+        var nova = gebi("novaFrase").value
+    
+        elemento.innerHTML = nova
+    }
+
 
 function gebi(id){
     return document.getElementById(id)

@@ -23,12 +23,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   <h1>Calculadora</h1>
-   <input id="novaFrase" type="text"><br>
-   <input id="botão" type="button"
-        value="trocarFrase"
-        onclick="trocarTexto(Olá)"><br>
-    <a href="calculadora.html">calculador</a>
-    <a href="validar.html">validar</a>         
+    <h1 ondblclick="mudarFrase()" id="frase">Olá Mundo!</h1>
+    <input id="novaFrase" type="text"><br>
+        <input id="botao" type="button" 
+           value="Trocar Frase" 
+          onclick="trocarTexto();"><br>
+    <a href="calculadora.html">Vai para Calculadora</a><br>
+    <a href="validar.html">Vai para Validar</a>        
 </body>
 </html>
