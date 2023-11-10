@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <script type="text/javascript" src="js/myscript.js"></script>
+
+    <script>
+
+        function trabalhandoNúmeros() {
+            var num1 = prompt("Diga um número", 10.3)
+            var num2 = 5
+            var total = parseFloat(num1) + num2
+            alert("total=" + total)
+        }
+
+        function validar() {
+            var email = gebi("idEmail").value;
+            var senha = gebi("idSenha").value;
+            var idade = gebi("idIdade").value;
+            var nome = gebi("idNome").value;
+            var altura = gebi("idAltura").value;
+            var Peso = gebi("idPeso").value;
+        
+            if (idade < 10 ) {
+                alert("Idade deve ser maior que 10")
+                return               
+            }
+
+            if ((senha != 1234 ) && (senha != 4321)) {
+                alert("Senha errada")
+                return
+            }
+
+            if (email != "nada@nada.com") {
+                alert("Email errado")
+                return
+            }
+
+            if (nome != "fulano") {
+                alert("Nome errado")
+                return
+            }    
+
+            if ((Peso < 40) && (Peso > 150)) {
+                alert("Peso deve ser maior que 40 e menor que 150")
+                return
+            }
+
+            if (altura < 1.40) {
+                alert("altura deve ser maior que 1.40")
+                return
+            }
+
+
+            gebi("meuForm").submit()
+            alert("Sucesso!")
+        }
+
+    </script>
+</head>
+
+<body>
+    <center>
+        <h1>Validar</h1>
+        <form id="meuForm" action="https://jkorpela.fi/cgi-bin/echo.cgi">
+            <fieldset align="center" style="width: 270px;">
+                <legend>Login:</legend>
+                Email: <input id="idEmail" name="email" type="email" required placeholder="nada@nada.com"><br>
+                Senha: <input id="idSenha" name="senha" type="password"><br>
+                Idade: <input id="idIdade" name="Idade" type="number" step="1"><br>
+                Peso: <input id="idPeso" name="Peso" type="number" required step="0,00"> <br>
+                Altura: <input id="idAltura" name="Altura" type="number"><br>
+                Nome: <input id="idNome" name="Nome" type="text"><br>
+                <input type="button" value="Enviar" onclick="validar();">
+            </fieldset>
+        </form>
+    </center>
+</body>
+
+</html>
