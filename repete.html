@@ -59,6 +59,25 @@
                     
                 }
             }
+
+            function cjm(){
+                var a= ["jose", "maria", "padre", "joana", "bento", "franscisco"]
+
+                for (let index = 0; index < a.length; index++) {
+                    const element = a[index];
+                }
+                document.write("original = " + a + "<br>")
+                var quem = prompt("Diga um nome")
+                var ondeEsta = a.indexOf(quem) // -1
+                if(ondeEsta != -1){
+                    document.write("casinha" + ondeEstaPadre + "tem padre <br>")
+                    a.splice(OndeEsta,1) //remove 1
+            }else{
+                document.write("não achei: " + quem)
+            }
+            document.write("alterado = " + a) 
+
+            }
         </script>
     </head>
 
@@ -67,8 +86,8 @@
         <input type="button" value="regressiva" onclick="contar1();">
         <input type="button" value="tabuada 5" onclick="contar2();">
         <input type="button" value="20" onclick="contar3();">
-
         <input type="button" value="carro" onclick="contar4();">
+        <input type="button" value="JM" onclick="cjm();">
     </body>
 
 </html>
