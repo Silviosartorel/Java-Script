@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <TItle>Titulo</TItle>
+        <script>
+            function contar() {
+                var soma = 0
+                for (var i = 1; i < 11; i++) {
+                    document.write(i + " " + soma + "<br>")
+                    soma = soma + i 
+                }
+                    document.write("Soma final =" + soma + "<br>")
+                    
+            }
+            function contar1() {       
+                var n = 10;
+                while(n >- 1) 
+                {
+                    document.write(n);
+                    document.write('<br>');
+
+                    n = n - 1;
+                }
+            }
+
+            function contar2() {    
+                var n = 5;
+                while(n < 50) 
+                {
+                    document.write(n);                  //errado
+                    document.write('<br>');
+
+                    n = n  * 5;
+                }
+            }
+
+            function contar3(){
+                var soma = 0
+                var n = 0
+                while (n < 21) {
+                    if( (soma + n) > 101){
+                        break    //para looping
+                    } else {
+                        soma = soma + n
+                    }
+                    n = n + 1
+                }
+                document.write(n);
+            }
+
+            function contar4(){
+                var numeros = [9, 21, 7, 15];
+                var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi", "abobrinha"];
+
+                for (let index = 0; index < cars.length; index++) {
+                    const element = cars[index];
+                    document.write(element + "<br>")
+                    
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <input type="button" value="Soma " onclick="contar();">
+        <input type="button" value="regressiva" onclick="contar1();">
+        <input type="button" value="tabuada 5" onclick="contar2();">
+        <input type="button" value="20" onclick="contar3();">
+
+        <input type="button" value="carro" onclick="contar4();">
+    </body>
+
+</html>
